@@ -54,7 +54,8 @@ The structure of file look like this
   
 Step 3
     Registor the app -> Go to setting file in INSTALLED_APPS section mention app name
-    ```python
+ 
+ ```python
     INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -64,4 +65,4 @@ Step 3
     'django.contrib.staticfiles',
     'rest_framework',
     'fn_api',
-    ```
+```
