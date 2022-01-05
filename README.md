@@ -40,7 +40,7 @@ Install all the above packages
 Step 1:
   After installing the package mentioned above 
   ```
-  django-admin startproject app
+  django-admin startproject app # app is project name
   ```
 
   
