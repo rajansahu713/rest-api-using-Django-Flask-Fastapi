@@ -52,3 +52,16 @@ The structure of file look like this
 <br>
 <img align="center" src="https://github.com/rajansahu713/rest-api-using-Django-Flask-Fastapi/blob/main/images/django.png" width="250" height="350">
   
+Step 3
+    Registor the app -> Go to setting file in INSTALLED_APPS section mention app name
+    ```python
+    INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'fn_api',
+    ```
