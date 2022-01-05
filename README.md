@@ -67,7 +67,8 @@ Step 3
     'fn_api',
 ```
 Step 4:
-    Create models
+    Create models and Serializer
+    
 ```python
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
@@ -78,4 +79,40 @@ class Product(models.Model):
         return self.product_name
         
 ```
-        
+
+Serializer
+```python
+from rest_framework import serializers
+from .models import Product
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ('product_id', 'product_name', 'category')
+```
+
+Step 5:
+    I write all logic for CRUD operation in view.py file
+   
+Step 6:
+    Declear all the end point in app.urls file after that we need to include in project urls.py
+
+```python
+from django.urls import path, include
+from . import views
+urlpatterns = [
+    path('', views.product_list, name='product_list'),
+]
+```
+
+app.urls
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('fn_api/', include('fn_api.urls')),
+]
+```
