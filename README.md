@@ -17,7 +17,6 @@ All the above frameworks are Python web-framwework. Lets discuss one by one
 
 1. <h4>Packages</h4>
     Among Django, Flask, and FastAPI, Django has the most packages that enable reusability of code. It is a full-stack web development framework, unlike Flask and FastAPI, that are minimalistic frameworks used for building fast websites.
-<br>
 2. <h4>Community</h4>
     Django has the most significant community because of its wide use and popularity next to Flask, which also has a thriving community. FastAPI, on the other hand, has a small community because it’s relatively new.
 
