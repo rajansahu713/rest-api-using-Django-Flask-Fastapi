@@ -48,5 +48,5 @@ Step 2:
   ```
 
 
-<img align="center" src="https://github.com/rajansahu713/CRUD-application-in-Flask/blob/main/images/django.png" width="500" height="350">
+<img align="center" src="https://github.com/rajansahu713/rest-api-using-Django-Flask-Fastapi/blob/main/images/django.png" width="500" height="350">
   
