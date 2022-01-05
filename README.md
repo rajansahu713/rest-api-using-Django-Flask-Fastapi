@@ -25,3 +25,22 @@ All the above frameworks are Python web-framwework. Lets discuss one by one
 
 4. <h4>Flexibility</h4>
     Flexibility is something developers value a lot, and Flask is more flexible than Django. Fast API, on the other hand, is flexible code-wise and doesn’t restrict the code layout. So we can say Flask is the most flexible among all three.
+
+Lets have look at code how to build Crud in different framework:
+ 
+Django
+
+Requirement  
+```python
+pip install django
+pip install djangorestframework
+```
+Install all the above packages
+
+Step 1:
+  After installing the package mentioned above 
+  ```
+  django-admin startproject app
+  ```
+
+  
