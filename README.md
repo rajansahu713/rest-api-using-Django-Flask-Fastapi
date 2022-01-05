@@ -248,3 +248,60 @@ api.add_resource(deleteUser,"/delete/<int:num>")
 api.add_resource(UpdateUser,"/user/<int:id>")
  ```
  
+### FastApi
+
+Requirements
+```python
+pip install fastapi
+pip install uvicorn
+```
+
+Step 1:
+Connection with database  done in database.py
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+# SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+```
+
+Step 2:
+Create model in models.py 
+```python
+from sqlalchemy import Column, String, Integer
+from database import Base
+# A SQLAlchemny ORM Place
+class DBPlace(Base):
+    __tablename__ = 'places'
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(50))
+    description = Column(String, nullable=True)
+```
+Step 3:
+All the logics are written in CRUD.py file
+
+Step 4:
+In app.py we combine all the things (models, crud) by importing from rest of files
+
+
+Refrence
+https://www.djangoproject.com/
+https://www.django-rest-framework.org/
+https://flask.palletsprojects.com/en/2.0.x/
+https://flask-restful.readthedocs.io/en/latest/
+https://fastapi.tiangolo.com/
+
+
+
+Thank you!!
+
