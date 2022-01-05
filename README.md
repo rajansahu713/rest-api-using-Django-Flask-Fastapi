@@ -1,16 +1,17 @@
-## RestApi using Django, Flask and Fastapi
+# RestApi using Django, Flask and Fastapi
 
-I have created CRUD operation restfull API using Django, Flask and FastApi.
+I have created CRUD operations API using Django, Flask and FastApi.
+
 All the above frameworks are Python web-framwework. Lets discuss one by one
 
 
-#### Django rest framwork
+## Django rest framwork
     REST APIs are an industry-standard way for web services to send and receive data. They use HTTP request methods to facilitate the request-response cycle and typically transfer   data using JSON, and more rarely - HTML, XML and other formats
   
-#### Flask 
+## Flask 
     Flask is a popular micro framework for building web applications. Since it is a micro-framework, it is very easy to use and lacks most of the advanced functionality which is found in a full-fledged framework.
   
-#### FastApi
+## FastApi
     FastAPI is a modern, python-based high-performance web framework used to create Rest APIs. Its key features are that is fast, up to 300% faster to code, fewer bugs, easy to use, and production-friendly.
   
 ### Camparision between Django, Flask and FastApi
@@ -28,32 +29,33 @@ All the above frameworks are Python web-framwework. Lets discuss one by one
 
 Lets have look at code how to build Crud in different framework:
  
-Django
+## Django
 
-Requirement  
+Requirements  
 ```python
 pip install django
 pip install djangorestframework
 ```
-Install all the above packages
 
 Step 1:
-  After installing the package mentioned above 
+  After installing the package mentioned above run the below command to create django project 
+  <br>
+  **Note: A project can have multiple apps but vice versa is not true.**
   ```
   django-admin startproject app #app is project name
   ```
 Step 2:
+    go inside project and run the below command to create a app (fn_api)
   ```
   python manage.py startapp fn_api #fn_api is app name
   ```
-
 
 The structure of file look like this
 <br>
 <img align="center" src="https://github.com/rajansahu713/rest-api-using-Django-Flask-Fastapi/blob/main/images/django.png" width="250" height="350">
   
 Step 3
-    Registor the app -> Go to setting file in INSTALLED_APPS section mention app name
+    Registor the app -> Go to settings.py file in INSTALLED_APPS section mention app name ('rest_framework','fn_api',)
  
  ```python
     INSTALLED_APPS = [
@@ -68,7 +70,8 @@ Step 3
 ```
 Step 4:
     Create models and Serializer
-    
+
+models.py
 ```python
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
@@ -80,7 +83,7 @@ class Product(models.Model):
         
 ```
 
-Serializer
+serializer.py
 ```python
 from rest_framework import serializers
 from .models import Product
@@ -92,10 +95,10 @@ class ProductSerializer(serializers.ModelSerializer):
 ```
 
 Step 5:
-    we need to write all logic for CRUD operation in view.py file
+    I have written all logic for CRUD operation in views.py file
    
 Step 6:
-    Declear all the end point in app.urls file after that we need to include in project urls.py
+    Decleared the end-point in app.urls file after that we need to include in project urls.py (app.ulrs)
 
 ```python
 from django.urls import path, include
@@ -117,7 +120,7 @@ urlpatterns = [
 ]
 ```
 
-### Flask
+## Flask
 
 Requirement
 ```python
@@ -127,20 +130,20 @@ pip install Flask-SQLAlchemy
 ```
 
 Step 1:
-    import required modules
+    imported all the required modules
 ```python
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 from flask_sqlalchemy import SQLAlchemy
 ```
 Step2:
-1. Initializing instance of flask app by declearing**  
+1. Initializing instance of flask app by declearing 
 ```python
 app = Flask(__name__)
 ```
 
 Step3:
-    Configure and Creating Database
+    Configured and Creating Database
 ```python
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///text.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -248,7 +251,7 @@ api.add_resource(deleteUser,"/delete/<int:num>")
 api.add_resource(UpdateUser,"/user/<int:id>")
  ```
  
-### FastApi
+## FastApi
 
 Requirements
 ```python
