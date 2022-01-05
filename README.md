@@ -295,11 +295,12 @@ In app.py we combine all the things (models, crud) by importing from rest of fil
 
 
 Refrence
-https://www.djangoproject.com/
-https://www.django-rest-framework.org/
-https://flask.palletsprojects.com/en/2.0.x/
-https://flask-restful.readthedocs.io/en/latest/
-https://fastapi.tiangolo.com/
+
+    https://www.djangoproject.com/
+    https://www.django-rest-framework.org/
+    https://flask.palletsprojects.com/en/2.0.x/
+    https://flask-restful.readthedocs.io/en/latest/
+    https://fastapi.tiangolo.com/
 
 
 
