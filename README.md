@@ -15,13 +15,14 @@ All the above frameworks are Python web-framwework. Lets discuss one by one
   
 ### Camparision between Django, Flask and FastApi
 
-<h3>Packages</h3>
+1. <h4>Packages</h4>
     Among Django, Flask, and FastAPI, Django has the most packages that enable reusability of code. It is a full-stack web development framework, unlike Flask and FastAPI, that are minimalistic frameworks used for building fast websites.
-
-  **Community**
+<br>
+2. <h4>Community</h4>
     Django has the most significant community because of its wide use and popularity next to Flask, which also has a thriving community. FastAPI, on the other hand, has a small community because it’s relatively new.
 
-  **Performance**
+3. <h4>Performance</h4>
     In performance, FastAPI is the leader because it is speed-oriented, then next to Flask, and finally Django, which is not very fast.
 
-  **Flexibility** Flexibility is something developers value a lot, and Flask is more flexible than Django. Fast API, on the other hand, is flexible code-wise and doesn’t restrict the code layout. So we can say Flask is the most flexible among all three.
+4. <h4>Flexibility</h4>
+  Flexibility is something developers value a lot, and Flask is more flexible than Django. Fast API, on the other hand, is flexible code-wise and doesn’t restrict the code layout. So we can say Flask is the most flexible among all three.
