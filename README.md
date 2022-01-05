@@ -49,5 +49,7 @@ Step 2:
 
 
 The structure of file look like this
+
+<br><br>
 <img align="center" src="https://github.com/rajansahu713/rest-api-using-Django-Flask-Fastapi/blob/main/images/django.png" width="350" height="430">
   
