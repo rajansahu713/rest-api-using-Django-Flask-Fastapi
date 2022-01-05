@@ -47,4 +47,6 @@ Step 2:
   python manage.py startapp fn_api #fn_api is app name
   ```
 
+
+<img align="center" src="https://github.com/rajansahu713/CRUD-application-in-Flask/blob/main/images/django.png" width="500" height="350">
   
