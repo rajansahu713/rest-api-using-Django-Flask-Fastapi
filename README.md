@@ -40,7 +40,11 @@ Install all the above packages
 Step 1:
   After installing the package mentioned above 
   ```
-  django-admin startproject app # app is project name
+  django-admin startproject app #app is project name
+  ```
+Step 2:
+  ```
+  python manage.py startapp fn_api #fn_api is app name
   ```
 
   
